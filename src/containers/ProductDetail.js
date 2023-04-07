@@ -26,7 +26,7 @@ const ProductDetail = () => {
         return () => {
           dispatch(removeSelectedProduct())
         }
-    }, [productId]);
+    });
     return (
         <div className = "ui grid container">
             {Object.keys(product).length === 0} ? (
@@ -42,7 +42,7 @@ const ProductDetail = () => {
                         <div className = "column rp">
                             <h1>{title}</h1>
                             <h2>
-                                <a className = "ui teal tag label">${price}</a>
+                                <button className = "ui teal tag label">${price}</button>
                             </h2>
                             <h3 className = "ui brown block header">{category}</h3>
                             <p>{description}</p>
